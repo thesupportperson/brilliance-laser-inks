@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliance Laser Inks | High-Quality Laser Marking Inks</title>
+<meta name="description" content="Brilliance Laser Inks, LLC is an innovative developer, manufacturer, and distributor of high-quality laser marking inks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #dc2626;
+    --red-dark: #b91c1c;
+    --navy: #1a3d68;
+    --black: #000;
+    --white: #fff;
+    --gray-light: #f5f5f5;
+    --gray-mid: #e5e5e5;
+    --gray-text: #555;
+    --gold: #fbbf24;
+    --font: 'Montserrat', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; font-family: var(--font); }
+
+  .announcement-bar {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  header {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  }
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .logo-wrap img { height: 54px; width: auto; }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 12px;
+    color: #111;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+  }
+  nav a:hover { color: var(--red); background: #fef2f2; }
+  .header-actions { display: flex; align-items: center; gap: 12px; }
+  .cart-btn {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+  }
+  .cart-btn:hover { background: var(--red-dark); }
+  .hamburger { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: #111; margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+
+  .hero {
+    position: relative;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: clamp(1.9rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.12;
+    max-width: 640px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+  }
+  .hero-content p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.88);
+    max-width: 520px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-red {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+  .btn-outline-white {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline-white:hover { background: #fff; color: #111; }
+
+  .section-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .section-sub {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray-text);
+    max-width: 580px;
+    margin: 0 auto 48px;
+    line-height: 1.75;
+  }
+
+  .collections-section { padding: 72px 24px; background: #fff; }
+  .collections-inner { max-width: 1280px; margin: 0 auto; }
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+  }
+  .collection-card {
+    background: var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid #eee;
+  }
+  .collection-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .collection-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .collection-card-body { padding: 12px 14px 16px; }
+  .collection-card-body h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #111; }
+
+  .bestsellers-section { background: var(--gray-light); padding: 72px 24px; }
+  .bestsellers-inner { max-width: 1280px; margin: 0 auto; }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid #eee;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .product-img-wrap { position: relative; background: #f7f7f7; }
+  .product-img-wrap img { width: 100%; aspect-ratio: 1; object-fit: contain; padding: 20px; }
+  .sale-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--red);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .product-body { padding: 16px 18px 20px; }
+  .product-body h3 { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 10px; line-height: 1.5; }
+  .price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .price-sale { font-size: 16px; font-weight: 800; color: var(--red); }
+  .price-compare { font-size: 13px; color: #aaa; text-decoration: line-through; }
+  .add-to-cart {
+    width: 100%;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 11px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s;
+  }
+  .add-to-cart:hover { background: var(--red-dark); }
+
+  .preview-section { background: var(--navy); padding: 80px 24px; color: #fff; }
+  .preview-inner { max-width: 1280px; margin: 0 auto; }
+  .preview-section .section-title { color: #fff; }
+  .preview-section .section-sub { color: rgba(255,255,255,0.72); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .gallery-item { border-radius: 8px; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s; }
+  .gallery-item:hover img { transform: scale(1.07); }
+
+  .testimonials-section { background: #fff; padding: 80px 24px; }
+  .testimonials-inner { max-width: 1280px; margin: 0 auto; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .review-card {
+    background: var(--gray-light);
+    border-radius: 8px;
+    padding: 28px 24px;
+    border: 1px solid var(--gray-mid);
+  }
+  .stars { color: var(--gold); font-size: 18px; margin-bottom: 12px; letter-spacing: 2px; }
+  .review-text { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 16px; font-style: italic; }
+  .reviewer { font-size: 12px; font-weight: 700; color: #111; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .about-section { background: var(--black); color: #fff; padding: 80px 24px; }
+  .about-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-text h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 20px; line-height: 1.15; }
+  .about-text p { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 16px; max-width: 54ch; }
+  .about-img { border-radius: 12px; overflow: hidden; }
+  .about-img img { width: 100%; height: 420px; object-fit: cover; border-radius: 12px; }
+
+  .cta-band { background: var(--red); padding: 60px 24px; text-align: center; color: #fff; }
+  .cta-band h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; margin-bottom: 12px; }
+  .cta-band p { font-size: 15px; opacity: 0.9; margin-bottom: 28px; }
+  .btn-white {
+    display: inline-block;
+    background: #fff;
+    color: var(--red);
+    padding: 14px 36px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-white:hover { background: #f1f1f1; transform: translateY(-1px); }
+
+  footer { background: #111; color: rgba(255,255,255,0.65); padding: 56px 24px 32px; }
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand img { height: 44px; width: auto; margin-bottom: 16px; filter: brightness(10); }
+  .footer-brand p { font-size: 13px; line-height: 1.8; }
+  .footer-col h4 { color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+  .footer-col ul li a:hover { color: #fff; }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom p { font-size: 12px; }
+  .social-links { display: flex; gap: 16px; }
+  .social-links a { font-size: 13px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+  .social-links a:hover { color: #fff; }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #eee;
+    position: absolute;
+    left: 0; right: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 200;
+    padding: 8px 0;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    padding: 13px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #111;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .mobile-nav a:hover { color: var(--red); background: #fef2f2; }
+
+  @media (max-width: 960px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .about-img { order: -1; }
+    .about-img img { height: 280px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    nav { display: none; }
+    .hamburger { display: block; }
+    .hero { min-height: 400px; }
+    .hero-content { padding: 56px 24px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+    .collections-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 400px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announcement-bar">
+  &#10022; FREE shipping on orders over $100 (USA only) &nbsp;|&nbsp; Premium Laser Marking Solutions &#10022;
+</div>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo-wrap">
+      <img src="https://brilliancelaserinks.com/cdn/shop/files/Copy_of_logo_3.5_x_1_in.png?v=1778790617&width=500"
+           alt="Brilliance Laser Inks" loading="eager" width="220" height="54">
+    </a>
+    <nav>
+      <a href="#collections">Shop</a>
+      <a href="#products">Best Sellers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" aria-label="Cart">&#128722; Cart (0)</button>
+    </div>
+    <button class="hamburger" aria-label="Open menu" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#collections">Shop</a>
+    <a href="#products">Best Sellers</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="hero-bg"
+       src="https://brilliancelaserinks.com/cdn/shop/files/ChatGPT_Image_May_15_2026_06_05_38_PM.png?v=1778882770&width=1920"
+       alt="Laser marking background" loading="eager" width="1920" height="800">
+  <div class="hero-content">
+    <h1>High-Quality Laser Marking Inks &amp; Solutions</h1>
+    <p>Engineered for precision. Brilliance Laser Inks delivers professional-grade marking solutions for metals, ceramics, glass, plastics, and more.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn-red">Shop Best Sellers</a>
+      <a href="#collections" class="btn-outline-white">Browse Collections</a>
+    </div>
+  </div>
+</section>
+
+<section class="collections-section" id="collections">
+  <div class="collections-inner">
+    <div class="section-label">Browse By Material</div>
+    <div class="section-title">Brilliance Collections</div>
+    <div class="section-sub">Precision formulated laser marking inks for every substrate and application.</div>
+    <div class="collections-grid">
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/BLI101_988a3b50-6567-46e1-9280-534d19922fbe.jpg?v=1749843415&width=400" alt="Metal Inks" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Metal</h3></div>
+      </div>
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/3_466680b9-eaf4-4aaf-9910-2f10e32ee495.jpg?v=1749843415&width=400" alt="Stainless Steel" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Stainless Steel</h3></div>
+      </div>
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/ALUM_3dac953d-4a88-422d-ab7c-40b15b677c7f.jpg?v=1749843415&width=400" alt="Aluminum" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Aluminum</h3></div>
+      </div>
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/6_800e98b6-5a27-4d61-82fd-d1f720a705b8.jpg?v=1749843415&width=400" alt="Glass and Ceramic" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Glass &amp; Ceramic</h3></div>
+      </div>
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/Aerosol_Cans.jpg?v=1749832802&width=400" alt="Aerosol Sprays" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Aerosol Sprays</h3></div>
+      </div>
+      <div class="collection-card">
+        <img src="https://brilliancelaserinks.com/cdn/shop/files/black-metal-concentrated-laser-marking-powder-powder-brilliance-laser-inks-llc-506729.jpg?v=1727902263&width=400" alt="Powder Solutions" loading="lazy" width="200" height="200">
+        <div class="collection-card-body"><h3>Powder</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bestsellers-section" id="products">
+  <div class="bestsellers-inner">
+    <div class="section-label">Top Picks</div>
+    <div class="section-title">Our Best Sellers</div>
+    <div class="section-sub">The most trusted laser marking products from our lineup, loved by professionals worldwide.</div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="sale-badge">Sale</span>
+          <img src="https://brilliancelaserinks.com/cdn/shop/files/2_ac5c332b-211d-4ed6-9c48-0b353d964dbe.png?v=1750084367&width=600" alt="Universal Black Metal Laser Spray Can 12oz" loading="lazy" width="300" height="300">
+        </div>
+        <div class="product-body">
+          <h3>Universal Black Metal Laser Spray Can &ndash; 12oz Aerosol</h3>
+          <div class="price-row"><span class="price-sale">$44.95 USD</span><span class="price-compare">$54.95</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="sale-badge">Sale</span>
+          <img src="https://brilliancelaserinks.com/cdn/shop/files/1_96a2db23-5221-4be1-b0d7-256d72dadd55.png?v=1750084868&width=600" alt="Ceramic and Glass Black Marking Spray 12oz" loading="lazy" width="300" height="300">
+        </div>
+        <div class="product-body">
+          <h3>Ceramic and Glass Black Marking Spray &ndash; 12oz Aerosol</h3>
+          <div class="price-row"><span class="price-sale">$48.95 USD</span><span class="price-compare">$59.95</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="sale-badge">Sale</span>
+          <img src="https://brilliancelaserinks.com/cdn/shop/files/3_625aec9f-ca80-4fda-b169-7b8a23de174a.png?v=1750084868&width=600" alt="Black Aluminum Laser Marking Spray Can 12oz" loading="lazy" width="300" height="300">
+        </div>
+        <div class="product-body">
+          <h3>Black Aluminum Laser Marking Spray Can &ndash; 12oz Aerosol</h3>
+          <div class="price-row"><span class="price-sale">$49.95 USD</span><span class="price-compare">$69.95</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="sale-badge">Sale</span>
+          <img src="https://brilliancelaserinks.com/cdn/shop/files/4_c5abe1cf-5d72-4a13-8a6c-81d46a4e2492.png?v=1750084367&width=600" alt="Red Copper Tone Stainless Steel Laser Spray Can 12oz" loading="lazy" width="300" height="300">
+        </div>
+        <div class="product-body">
+          <h3>Red (Copper Tone) Stainless Steel Laser Spray Can &ndash; 12oz Aerosol</h3>
+          <div class="price-row"><span class="price-sale">$44.95 USD</span><span class="price-compare">$79.95</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preview-section" id="gallery">
+  <div class="preview-inner">
+    <div class="section-label" style="color:#fbbf24;">Real Results</div>
+    <div class="section-title">Preview of Brilliance Laser Inks</div>
+    <div class="section-sub">Here is the laser marking effect on various substrates enhanced with Brilliance laser marking solutions.</div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/BLI101_988a3b50-6567-46e1-9280-534d19922fbe.jpg?v=1749843415&width=600" alt="Laser marking on metal" loading="lazy" width="300" height="300"></div>
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/3_466680b9-eaf4-4aaf-9910-2f10e32ee495.jpg?v=1749843415&width=600" alt="Stainless steel marking" loading="lazy" width="300" height="300"></div>
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/ALUM_3dac953d-4a88-422d-ab7c-40b15b677c7f.jpg?v=1749843415&width=600" alt="Aluminum marking" loading="lazy" width="300" height="300"></div>
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/6_800e98b6-5a27-4d61-82fd-d1f720a705b8.jpg?v=1749843415&width=600" alt="Glass marking" loading="lazy" width="300" height="300"></div>
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/ChatGPT_Image_May_13_2026_05_02_24_PM.png?v=1778706159&width=600" alt="Laser product showcase" loading="lazy" width="300" height="300"></div>
+      <div class="gallery-item"><img src="https://brilliancelaserinks.com/cdn/shop/files/Aerosol_Cans.jpg?v=1749832802&width=600" alt="Aerosol spray cans" loading="lazy" width="300" height="300"></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section" id="reviews">
+  <div class="testimonials-inner">
+    <div class="section-label">Customer Reviews</div>
+    <div class="section-title">Real Stories, Real Results!</div>
+    <div class="section-sub">See what laser professionals and hobbyists are saying about Brilliance Laser Inks.</div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I have tried many different laser marking sprays over the years, and Brilliance Laser Inks is by far the best. The results are crisp, dark, and permanent. Highly recommend!"</p>
+        <div class="reviewer">&mdash; Michael T., Verified Buyer</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Amazing product! I use it on stainless steel tumblers and the marking is perfect every time. Customer service was also fantastic when I had questions about application."</p>
+        <div class="reviewer">&mdash; Sarah K., Verified Buyer</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"This product works exactly as advertised. The black marks on aluminum look incredible and hold up very well. My clients are always impressed with the finished results."</p>
+        <div class="reviewer">&mdash; Jason R., Verified Buyer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <h2>Engineered by Experts.<br>Trusted by Professionals.</h2>
+      <p>Brilliance Laser Inks, LLC is an innovative developer, manufacturer, and distributor of high-quality laser marking inks, founded by a dedicated engineer with a passion and extensive knowledge in the industry.</p>
+      <p>Our products are tested and formulated to deliver exceptional results across a wide range of substrates &mdash; from stainless steel and aluminum to ceramics, glass, and plastics.</p>
+      <a href="#products" class="btn-red" style="margin-top:8px; display:inline-block;">Shop All Products</a>
+    </div>
+    <div class="about-img">
+      <img src="https://brilliancelaserinks.com/cdn/shop/files/liquid_ready_family1.jpg?v=1663132745&width=800" alt="Brilliance Laser Inks product family" loading="lazy" width="600" height="420">
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <h2>Ready to Get Started?</h2>
+  <p>Order online and get free shipping on orders over $100 within the USA.</p>
+  <a href="#products" class="btn-white">Shop All Products</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://brilliancelaserinks.com/cdn/shop/files/Copy_of_logo_3.5_x_1_in.png?v=1778790617&width=400" alt="Brilliance Laser Inks" loading="lazy" width="200" height="48">
+      <p>High-quality laser marking inks for professionals. Engineered for precision, built for results.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">All Products</a></li>
+        <li><a href="#">Metal Inks</a></li>
+        <li><a href="#">Ceramic &amp; Glass</a></li>
+        <li><a href="#">Aluminum</a></li>
+        <li><a href="#">Plastics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="#">How to Apply</a></li>
+        <li><a href="#">User Stories</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Affiliate Program</a></li>
+        <li><a href="#">Become a Distributor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Brilliance Laser Inks, LLC. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GHL CHAT WIDGET -->
+<script src="https://widgets.leadconnectorhq.com/loader.js"
+  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+  data-widget-id="6a043a630d6444dd882c6b05">
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      const isOpen = mobileNav.classList.contains('open');
+      hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+  }
+</script>
+</body>
+</html>
